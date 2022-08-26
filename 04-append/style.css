@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+}
+
+h2 {
+  margin-left: 1rem;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.section_grid {
+  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+article {
+  padding: 1rem;
+  border: 1px solid black;
+  margin: 1rem;
+}
+
+img {
+  width: 100%;
+}
+
+/* Adjacent sibling combinator
+article:first-of-type + article {
+  color: red;
+  background-color: blue;
+} */
+
+/* :nth-child() */
+article:nth-child(2) {
+  color: red;
+  background-color: blue;
+}

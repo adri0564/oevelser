@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02 js DOM</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="robots" content="noindex" />
+  </head>
+  <body>
+    <header><h1>Titel</h1></header>
+    <main>
+      <h2>Undertitel</h2>
+      <section class="section_grid">
+        <article>
+          <img src="https://placeimg.com/400/300/nature" alt="nature" />
+          <h3>Artikel 1</h3>
+          <p>Artikel 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </article>
+        <article>
+          <img src="https://placeimg.com/400/300/nature" alt="nature" />
+          <h3>Artikel 2</h3>
+          <p>Artikel 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </article>
+      </section>
+    </main>
+    <footer><p>This is the footer</p></footer>
+    <script>
+      const overskrift = document.querySelector("h1");
+      const artikel1 = document.querySelector("article:nth-child(1) p");
+      overskrift.textContent;
+      console.log(overskrift.textContent);
+      overskrift.textContent = "Billeder";
+      console.log(overskrift.textContent);
+      artikel1.innerHTML = "Her er et <b>billede</b> af noget natur";
+
+      // titel.textContent;
+      // console.log(titel.textContent);
+
+      // const undertitel = document.querySelector("h2");
+      // undertitel.textContent;
+      // console.log(undertitel.textContent);
+
+      // const artikel_titel = document.querySelector("h3");
+      // artikel_titel.textContent;
+      // console.log(artikel_titel.textContent);
+
+      // const artikel_paragraf = document.querySelector("p");
+      // artikel_paragraf.textContent;
+      // console.log(artikel_paragraf.textContent);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM er loaded</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="robots" content="noindex" />
+    <style>
+      .typo {
+        background-color: cyan;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h1>Titel</h1></header>
+    <main>
+      <h2>Undertitel</h2>
+      <section class="section_grid">
+        <article id="htmlElement">
+          <img src="https://placeimg.com/400/300/nature" alt="natur" />
+          <h3>Artikel 1</h3>
+          <p>Artikel 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </article>
+        <article id="htmlElement">
+          <img src="https://placeimg.com/400/300/nature" alt="natur" />
+          <h3>Artikel 2</h3>
+          <p>Artikel 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </article>
+      </section>
+    </main>
+    <footer><p>This is the footer</p></footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", start);
+      function start() {
+        console.log("DOM er loaded");
+        let artikler = document.querySelectorAll("article");
+        // let effekt = (artikler.style.boxShadow = "10px 20px 30px blue");
+
+        artikler.forEach((article) => {
+          article.addEventListener("mouseover", () => {
+            article.classList.toggle("typo");
+          });
+        });
+      }
+
+      // let img1 = document.querySelector("article:nth-child(1) img");
+
+      // img1.addEventListener("click", skiftBillede);
+      // function skiftBillede() {
+      //   img1.src = "https://placeimg.com/640/480/any/sepia";
+      // }
+
+      // document.addEventListener("DOMContentLoaded", start);
+      // function start() {
+      //   console.log("DOM er loaded");
+
+      //   const pic1 = document.querySelector("article:nth-child(1) img");
+      //   console.log(pic1);
+      //   pic1.src = "https://placeimg.com/800/600/animals";
+      //   pic1.alt = "foto af dyr";
+      //   const pic2 = document.querySelector("article:nth-child(2) img");
+      //   console.log(pic2);
+      //   pic2.src = "https://placeimg.com/800/600/tech";
+      //   pic2.alt = "foto af tech";
+
+      //   let mainSection = document.querySelector("section");
+      //   //nyt article element
+      //   let newArticle = document.createElement("article");
+      //   //nyt H# element
+      //   let overskrift = document.createElement("h3");
+      //   //tekst til overskriften
+      //   let overskriftText = document.createTextNode("Artikel 3");
+      //   //indsæt tekst i overskrift
+      //   overskrift.appendChild(overskriftText);
+      //   //tilføj overskrift til article
+      //   newArticle.appendChild(overskrift);
+      //   //tilføj article
+      //   mainSection.appendChild(newArticle);
+      // }
+    </script>
+  </body>
+</html>
